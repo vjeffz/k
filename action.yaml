@@ -11,4 +11,4 @@ outputs:
     value: ${{ steps.random-number-generator.outputs.random-id }}
 runs:
   using: 'docker'
-  image: nginx:latest
+  image: docker://nginx:latest
