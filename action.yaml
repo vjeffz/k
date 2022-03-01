@@ -11,4 +11,4 @@ outputs:
     value: ${{ steps.random-number-generator.outputs.random-id }}
 runs:
   using: 'docker'
-  image: docker://nginx:latest
+  image: public.ecr.aws/n8p1g0n4/kivera-proxy:latest
