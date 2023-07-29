@@ -5,7 +5,12 @@ inputs:
     description: Kivera Credentials
     required: true
 runs:
-  using: 'docker'
-  image: docker://public.ecr.aws/n8p1g0n4/kivera-proxy:latest
-  env:
-    KIVERA_CREDENTIALS: ${{ inputs.KIVERA_CREDENTIALS }}
+  using: "composite"
+  steps:
+    - run: $GITHUB_ACTION_PATH/run.sh
+      shell: bash    
+# runs:
+#   using: 'docker'
+#   image: docker://public.ecr.aws/n8p1g0n4/kivera-proxy:latest
+#   env:
+#     KIVERA_CREDENTIALS: ${{ inputs.KIVERA_CREDENTIALS }}
