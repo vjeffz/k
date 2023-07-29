@@ -7,7 +7,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: $GITHUB_ACTION_PATH/run.sh "${{ inputs.KIVERA_CREDENTIALS }}"
+    - run: $GITHUB_ACTION_PATH/run.sh '${{ inputs.KIVERA_CREDENTIALS }}'
       shell: bash
 # runs:
 #   using: 'docker'
