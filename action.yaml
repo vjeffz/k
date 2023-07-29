@@ -1,11 +1,11 @@
-name: 'Hello World'
-description: 'Greet someone'
+name: 'Run Kivera'
+description: 'Start Kivera Proxy'
 inputs:
-  CERT_SUBJ: 
-    description: Public Cert Subject
+  KIVERA_CREDENTIALS: 
+    description: Kivera Credentials
     required: true
 runs:
   using: 'docker'
   image: docker://public.ecr.aws/n8p1g0n4/kivera-proxy:latest
   env:
-    CERT_SUBJ: ${{ inputs.CERT_SUBJ }}
+    KIVERA_CREDENTIALS: ${{ secrets.KIVERA_CREDENTIALS }}
