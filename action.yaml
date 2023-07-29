@@ -8,4 +8,4 @@ runs:
   using: 'docker'
   image: docker://public.ecr.aws/n8p1g0n4/kivera-proxy:latest
   env:
-    KIVERA_CREDENTIALS: ${{ secrets.KIVERA_CREDENTIALS }}
+    KIVERA_CREDENTIALS: ${{ inputs.KIVERA_CREDENTIALS }}
